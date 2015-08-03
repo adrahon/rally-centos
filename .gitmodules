@@ -1,0 +1,3 @@
+[submodule "rally"]
+	path = rally
+	url = https://github.com/openstack/rally.git
