@@ -12,7 +12,6 @@ RUN yum install -y git wget bash-completion python-devel libffi-devel gmp-devel 
     cd /tmp/rally &&\
     ./install_rally.sh &&\
     sed 's|#*connection *=.*|connection = sqlite:////home/rally/.rally.sqlite|' -i /etc/rally/rally.conf &&\
-    yum remove -y openssl-devel python-devel libxml2-devel libxslt-devel gcc && \
     yum remove -y openssl-devel python-devel gmp-devel libxml2-devel libxslt-devel postgresql-devel git gcc cpp glibc-devel glibc-headers kernel-headers keyutils-libs-devel krb5-devel libcom_err-devel libgcrypt-devel libgpg-error-devel libselinux-devel libsepol-devel libverto-devel pcre-devel zlib-devel &&\
     yum autoremove -y &&\
     yum clean all &&\
